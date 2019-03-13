@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+
+\usepackage{geometry}
+
+\geometry{paper=letterpaper, top=2cm, bottom=2cm, left=2cm, right=2cm}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{float}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\leftskip}{0pt}
+\setlength{\headheight}{14pt}
+\newcommand\question[2]{\vspace{.25in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
+\pagestyle{fancyplain}
+\lhead{\textbf{\NAME (\MEMBERS)}}
+\rhead{\textbf{Homework 1 }}
+\begin{document}\raggedright
+\newcommand\NAME{Group 5}
+\newcommand\MEMBERS{Wenxin Shi, Mingxiang Jia, Leyao Zhang, Chenyu Zhao}
+\newcommand\HWNUM{1}
+
+
+
+\question{1}{}
+let $d=\sqrt{B_1^2(t)+B_2^2(t)}$, let $y=d^2$, we have $\frac{Y}{t}=z_1^2+z_2^2\sim \chi_2^2$, where $z_1,z_2$ are standard normal distribution.
+$$
+\mathbb{P}(D<x)=\mathbb{P}(Y<x^2)=\mathbb{P}(\frac{Y}{t}<\frac{x^2}{t})=F_{\chi_2^2}(\frac{x^2}{t})
+$$
+$$
+f_d(x)=f_{\chi_2^2}(\frac{x^2}{t})\frac{2x}{t}=\frac{x}{t}e^{-\frac{1}{2}\frac{x^2}{t}}\mathbb{I}_{x>0}
+$$
+
+
+\question{4}{}
+$$
+\begin{aligned}
+\mathbb{P}(B^*(t)\ge a,B(t)\le x)&=\mathbb{P}(B(t)\le x)-\mathbb{P}(B^*(t)<a,B(t)\le x)\\
+&=\mathbb{P}(B(t)\le x)-\mathbb{P}(B^*(t)<a)\\
+&=\mathbb{P}(B(t)\le x)-\mathbb{P}(\tau_a>t)
+\end{aligned}
+$$
+we apply reflection principal
+$$
+\begin{aligned}
+\mathbb{P}(\tau_a>t)&=1-\mathbb{P}(\tau_a<t)\\
+&=1-2\mathbb{P}(B(t)>a)
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+\mathbb{P}(B^*(t)\ge a,B(t)\le x)&=\mathbb{P}(B(t)\le x)-1+2\mathbb{P}(B(t)>a)\\
+&=2N(-\frac{a}{\sqrt{t}})-N(-\frac{x}{\sqrt{t}})
+\end{aligned}
+$$
+where $N(\cdot)$ is culmulative function of standard normal distribution.
+
+
+	
+\end{document}
